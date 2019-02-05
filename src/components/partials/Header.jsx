@@ -1,19 +1,14 @@
 import React from "react"
-import { Button } from "semantic-ui-react"
 import styled from "styled-components"
+import LoginModal from "../modals/Login"
+import RegisterModal from "../modals/Register"
 
 const Controls = styled.div`
 	display: flex;
 	align-items: center;
 `
 
-const SignUpButton = styled(Button)`
-	&& {
-		margin-left: 30px;
-	}
-`
-
-export const HeaderWrap = styled.div`
+const HeaderWrap = styled.div`
 	position: absolute;
 	display: flex;
 	justify-content: flex-end;
@@ -29,12 +24,8 @@ class Header extends React.Component {
 		return (
 			<HeaderWrap>
 				<Controls>
-					<Button inverted type="success" color="green">
-						Login
-					</Button>
-					<SignUpButton inverted type="success" color="green">
-						Sign up
-					</SignUpButton>
+					<LoginModal />
+					<RegisterModal />
 				</Controls>
 			</HeaderWrap>
 		)
